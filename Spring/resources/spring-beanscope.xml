@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+	default-init-method="init">
+
+	<!-- 在一个spring.xml中配置scop e="singleto"显示为单利模式 -->
+	<!-- <bean id="beanScope" class="com.imooc.bean.BeanScope" scope="singleton"> 
+		</bean> -->
+
+	<!-- 针对每次请求都会创建新的实例 -->
+	<bean id="beanScope" class="com.imooc.bean.BeanScope"
+		scope="prototype">
+	</bean>
+
+</beans>
